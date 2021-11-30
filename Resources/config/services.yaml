@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  Machine\EventStoreBundle\:
+    resource: '../../'
+    exclude:
+      - '../../DependencyInjection/'
+
+  Machine\EventStoreBundle\Service\RegisterHistoryEvent:
+    tags: [machine.event_store.message_handler]

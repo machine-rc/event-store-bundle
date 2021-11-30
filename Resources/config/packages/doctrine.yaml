@@ -1,0 +1,11 @@
+doctrine:
+    dbal:
+        connections:
+            event_store:
+                schema_filter: ~^(?!history)~
+                url: '%env(resolve:EVENT_STORE_DSN)%'
+                default_table_options:
+                    charset: utf8mb4
+                    collate: utf8mb4_unicode_ci
+                options:
+                    collate: utf8mb4_general_ci
