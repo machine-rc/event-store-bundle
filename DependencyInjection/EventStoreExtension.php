@@ -31,6 +31,5 @@ class EventStoreExtension extends Extension
 
         $loader->load('packages/doctrine.yaml');
         $loader->load('packages/prooph_event_store.yaml');
-        $loader->load('packages/prooph_pdo_event_store.yaml');
     }
 }
